@@ -1,0 +1,119 @@
+     .login-container {
+            z-index: 1;
+            width: 330px;
+            height: 360px;
+            margin: 75px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.86)
+     }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 200;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-family: sans-serif;
+        }
+
+        .input-container {
+            position: relative;
+            margin-bottom: 27px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px 40px 8px 30px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .input-container .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .input-container .number-icon {
+            left: 6px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .input-container .eye-icon {
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 10;
+            height: 18px;
+            width: 18px;
+        }
+
+        .loginButton, .redirectButton {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .redirectButton {
+           background-color: #6accc8;
+
+        }
+
+        .redirectButton:hover {
+            background-color: #5ebfbb;
+            transition: background-color 0.5s ease;
+        }
+
+        .loginButton {
+            background-color: #4CAF50;
+            margin-top: 18px;
+        }
+
+        .loginButton:hover {
+            background-color: #45a049;
+            transition: background-color 0.5s ease;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+
+        input.error-placeholder::placeholder {
+            color: red;
+        }
+
+        .forgotButton:hover {
+           background-color: #a30b11;
+           transition: background-color 0.5s ease;
+        }
+
+        h2 {
+          font-weight: 100;
+        }
+

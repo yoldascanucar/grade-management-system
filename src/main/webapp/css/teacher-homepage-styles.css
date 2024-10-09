@@ -1,0 +1,63 @@
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.button-label {
+    display: block;
+    text-align: center;
+    margin-bottom: 45px;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.button-label:hover {
+    color: #0056b3;
+}
+
+.add-student-btn, .logout-btn {
+    text-decoration: none;
+    position: absolute;
+    top: 50px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 10px 20px;
+    color: white;
+}
+
+.add-student-btn {
+    left: 20px;
+    background-color: #007bff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-student-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    background-color: #cf0649;
+    right: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #b50741;
+    transform: translateY(-2px);
+}
+
+
+ h3{
+   font-size:1.6rem;
+   text-align:center;
+   margin-top: 25px;
+   margin-bottom: 100px;
+   font-weight: 200;
+}

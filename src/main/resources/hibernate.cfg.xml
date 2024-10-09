@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+    <hibernate-configuration>
+        <session-factory>
+            <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+            <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/grade_vault</property>
+            <property name="hibernate.connection.username">username=?</property>
+            <property name="hibernate.connection.password">password=?</property>
+            <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+            <property name="hibernate.hbm2ddl.auto">update</property>
+            <property name="hibernate.show_sql">true</property>
+            <mapping class="grade_management.entity.midterms.MathMidterm"/>
+            <mapping class="grade_management.entity.midterms.EnglishMidterm"/>
+            <mapping class="grade_management.entity.midterms.PhysicsMidterm"/>
+            <mapping class="grade_management.entity.finals.MathFinal"/>
+            <mapping class="grade_management.entity.finals.EnglishFinal"/>
+            <mapping class="grade_management.entity.finals.PhysicsFinal"/>
+            <mapping class="grade_management.entity.letter_grades.MathLetterGrade"/>
+            <mapping class="grade_management.entity.letter_grades.EnglishLetterGrade"/>
+            <mapping class="grade_management.entity.letter_grades.PhysicsLetterGrade"/>
+            <mapping class="grade_management.entity.student.Student"/>
+            <mapping class="grade_management.entity.teacher.Teacher"/>
+            <mapping class="grade_management.entity.course.Course"/>
+            <mapping class="grade_management.entity.course_student.CourseStudent"/>
+        </session-factory>
+    </hibernate-configuration>
+

@@ -1,0 +1,153 @@
+
+CREATE TABLE grade_vault.physics_midterm (
+    student_number INT NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    lecture VARCHAR(255) NOT NULL,
+    physics_midterm_grade INT DEFAULT NULL,
+    exam_type VARCHAR(255) NOT NULL,
+    PRIMARY KEY(student_number),
+    FOREIGN KEY (student_number) REFERENCES students(student_number)
+);
+
+CREATE TABLE grade_vault.physics_final (
+    student_number INT NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    lecture VARCHAR(255) NOT NULL,
+    physics_final_grade INT DEFAULT NULL,
+    exam_type VARCHAR(255) NOT NULL,
+    PRIMARY KEY(student_number),
+    FOREIGN KEY (student_number) REFERENCES students(student_number)
+);
+
+CREATE TABLE grade_vault.physics_letter_grade (
+    student_number INT NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    lecture VARCHAR(255) NOT NULL,
+    physics_average_grade INT NOT NULL,
+    PRIMARY KEY(student_number),
+    FOREIGN KEY (student_number) REFERENCES students(student_number)
+);
+
+CREATE TABLE grade_vault.english_midterm (
+    student_number INT NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    lecture VARCHAR(255) NOT NULL,
+    english_midterm_grade INT DEFAULT NULL,
+    exam_type VARCHAR(255) NOT NULL,
+    PRIMARY KEY(student_number),
+    FOREIGN KEY (student_number) REFERENCES students(student_number)
+);
+
+CREATE TABLE grade_vault.english_final (
+    student_number INT NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    lecture VARCHAR(255) NOT NULL,
+    english_final_grade INT DEFAULT NULL,
+    exam_type VARCHAR(255) NOT NULL,
+    PRIMARY KEY(student_number),
+    FOREIGN KEY (student_number) REFERENCES students(student_number)
+);
+
+CREATE TABLE grade_vault.english_letter_grade (
+    student_number INT NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    lecture VARCHAR(255) NOT NULL,
+    english_average_grade INT NOT NULL,
+    PRIMARY KEY(student_number),
+    FOREIGN KEY (student_number) REFERENCES students(student_number)
+);
+
+
+CREATE TABLE grade_vault.math_letter_grade (
+    student_number INT NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    lecture VARCHAR(255) NOT NULL,
+    math_average_grade INT NOT NULL,
+    PRIMARY KEY(student_number),
+    FOREIGN KEY (student_number) REFERENCES students(student_number)
+);
+
+
+CREATE TABLE grade_vault.math_midterm (
+    student_number INT NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    lecture VARCHAR(255) NOT NULL,
+    math_midterm_grade INT DEFAULT NULL,
+    exam_type VARCHAR(255) NOT NULL,
+    PRIMARY KEY(student_number),
+    FOREIGN KEY (student_number) REFERENCES students(student_number)
+);
+
+CREATE TABLE grade_vault.math_final (
+	student_number INT NOT NULL,
+	first_name VARCHAR(255) NOT NULL,
+	last_name VARCHAR(255) NOT NULL,
+	lecture VARCHAR(255) NOT NULL,
+	math_final_grade INT DEFAULT NULL,
+	exam_type VARCHAR(255) NOT NULL,
+	PRIMARY KEY(student_number),
+	FOREIGN KEY (student_number) REFERENCES students(student_number)
+);
+
+
+
+CREATE TABLE grade_vault.courses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(255) NOT NULL,
+    credit VARCHAR(5) NOT NULL,
+    teacher_id INT,
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id)
+);
+
+
+CREATE TABLE grade_vault.teachers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    teacher_number VARCHAR(20) NOT NULL UNIQUE,
+    identity_number VARCHAR(255) NOT NULL UNIQUE,
+    mail_address VARCHAR(255) NOT NULL,
+    teacher_role VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE grade_vault.students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    student_number INT NOT NULL UNIQUE,
+    identity_number VARCHAR(255) NOT NULL UNIQUE,
+    mail_address VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE grade_vault.teacher_student (
+    student_id INT NOT NULL ,
+    teacher_id INT NOT NULL,
+    PRIMARY KEY (student_id, teacher_id),
+    FOREIGN KEY (student_id) REFERENCES students(id),
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id)
+);
+
+
+CREATE TABLE grade_vault.course_student (
+    course_id INT NOT NULL,
+    student_id INT NOT NULL,
+    midterm_grade INT DEFAULT NULL,
+    final_grade INT DEFAULT NULL,
+    average_grade DOUBLE DEFAULT NULL,
+    letter_grade VARCHAR(2) DEFAULT NULL,
+    PRIMARY KEY (course_id, student_id),
+    FOREIGN KEY (course_id) REFERENCES courses(id),
+    FOREIGN KEY (student_id) REFERENCES students(id)
+);
+
+

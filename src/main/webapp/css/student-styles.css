@@ -1,0 +1,71 @@
+        body  {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fefaf9;
+        }
+
+        .sidebar {
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #e6f1fa;
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar a,.logout-btn, .home-btn, .id-card-btn, .grade-card-btn {
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .logout-btn, .home-btn, .id-card-btn, .grade-card-btn {
+            padding: 10px;
+            display: inline-flex;
+            align-items: center;
+            width: 140px;
+        }
+
+        .logout-btn, .id-card-btn, .grade-card-btn  {
+           background-color: #dc3545;
+           margin-top: 30px;
+        }
+
+        .home-btn, .id-card-btn, .grade-card-btn {
+           background-color: #42adf5;
+        }
+
+        .home-btn {
+           margin-top: 42px;
+        }
+
+        svg{
+           padding-right: 14px;
+        }
+
+        .sidebar a.bg-primary {
+            background-color: #5da4f0;
+        }
+
+         .button-label {
+            display: block;
+            text-align: center;
+            margin-bottom: 45px;
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-label:hover {
+            color: #0056b3;
+        }
