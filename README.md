@@ -51,7 +51,7 @@ Verify that the MySQL server is running and accessible.
 
 git clone https://github.com/yoldascanucar/grade-management-system.git
 
-- Create a MySQL database and execute SQL scripts from the `sql` folder
+- Create a MySQL database and execute SQL scripts (GradeManagementSystem\src\main\sql)
 
 - Update application.properties with your database credentials
    
